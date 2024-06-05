@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Container Styles */
+.table-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table Category Styles */
+.table-categories {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Table Element Styles */
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+/* Table Header Styles */
+th {
+    background-color: #7bb6b6;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+}
+
+/* Table Row Styles */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Table Cell Styles */
+td {
+    padding: 1rem;
+    text-align: left;
+    vertical-align: middle;
+}
