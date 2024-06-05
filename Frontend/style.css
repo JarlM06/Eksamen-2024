@@ -19,6 +19,37 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Fill Styles */
+.header-fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+}
+
+/* Larger Book Emoji */
+.header-fill:first-child {
+    font-size: 5rem; /* Adjust this value for the desired size */
+}
+
+/* Button Styles */
+.header-fill button {
+    background-color: #fff;
+    color: #4a90e2;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-fill button:hover {
+    background-color: #e0f7fa;
+}
+
 /* Table Container Styles */
 .table-container {
     display: flex;
@@ -70,4 +101,49 @@ td {
     padding: 1rem;
     text-align: left;
     vertical-align: middle;
+}
+
+/* Form Container Styles */
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input, textarea, .submit-button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #3b7db1;
 }

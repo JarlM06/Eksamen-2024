@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrer</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header-fill">📖</div>
+        <h1>Bokregister</h1>
+        <div class="header-fill" >
+            <a id="registrer-page" href="/Frontend/index.html">
+                <button>Bokregister</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form action="/path/to/your/backend" method="post">
+            <label for="title">Tittel:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="author">Forfatter:</label>
+            <input type="text" id="author" name="author" required>
+            
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" name="isbn" required>
+            
+            <label for="publisher">Utgiver:</label>
+            <input type="text" id="publisher" name="publisher" required>
+            
+            <label for="year">Publiseringsår:</label>
+            <input type="number" id="year" name="year" required>
+            
+            <label for="pages">Sideantall:</label>
+            <input type="number" id="pages" name="pages" required>
+
+            <button type="submit" class="submit-button">Registrer bok</button>
+        </form>
+    </div>
+</body>
+</html>
