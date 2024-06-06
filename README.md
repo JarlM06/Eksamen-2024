@@ -35,12 +35,27 @@ Hvilke spesifikasjoner du burde ha på serveren/containeren din for å kjøre pr
 * Sett opp en database og et table på SQL-serveren.
 * Endre PHP-filene med brukernavn, passord, serveradresse, databasenavn og tablenavn etter det som stemmer med det du har satt opp.
 
-https://help.dreamhost.com/hc/en-us/articles/215747718-Control-directory-indexes-with-an-htaccess-file
+![Server spesifikasjoner](eksamenSpecs.png)
+<br><br>
+## Brukerstøtte
+1. Hva er det første du ser når siden laster inn?
+2. Flytt deg til 'Registrer ny bok'-siden.
+3. Prøv å legg til en ny bok med ulike attributter.
+4. Dukket boken opp i tabellen?
+5. Klarer du å slette en bok fra tabellen?
+<br><br>
+6. Hvordan var programmet å bruke?
+7. Støtte du på noen problemer?
+8. Er det noe som kan forbedres? Hva?
 
-https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu
+## Kilder
 
-https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
+Generelt om HTML, PHP, CSS og SQL - https://www.w3schools.com/
 
-https://www.w3schools.com/
+GitHub i Ubuntu - https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
 
-https://chatgpt.com/?oai-dm=1
+Hjelp med error fiksing - https://chat.openai.com/
+
+Hvordan sette opp Linux, Apache, MySQL og PHP på Ubuntu - https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu
+
+Testing mot SQL injection - https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection
