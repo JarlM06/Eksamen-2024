@@ -43,5 +43,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function deleteBook(id) {
-    console.log("Deleting book with id:", id);
+    // Display a confirmation dialog
+    var confirmation = confirm("Er du sikker på at du vil slette denne boken fra bokregisteret?");
+    
+    // If user confirms
+    if (confirmation) {
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Configure the request
+        xhr.open("GET", "/Backend/deleteData.php?id=" + id, true);
+
+        // Set up the callback function
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Reload the page after the PHP script is done
+                window.location.reload();
+            }
+        };
+
+        // Send the request
+        xhr.send();
+    }
 };
