@@ -11,13 +11,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Lager en ny rad i tabellen
                 const tr = document.createElement('tr');
 
+                var id;
                 // Går igjennom hver celle i raden
                 for (const key in row) {
-                    // Lager en ny celle i tabellen
-                    const td = document.createElement('td');
-                    td.textContent = row[key];
-                    tr.appendChild(td);
+                    // Sjekker om dataen er 'ID'
+                    if (key !== 'ID') {
+                        // Lager en ny celle i tabellen
+                        const td = document.createElement('td');
+                        td.textContent = row[key];
+                        tr.appendChild(td);
+                    } else {
+                        id = row[key];
+                    }
                 }
+
+                const td = document.createElement('td');
+                tr.appendChild(td);
+                const button = document.createElement('button');
+                td.appendChild(button);
+                button.textContent = 'Slett';
+                button.className = 'delete-button';
+                button.setAttribute('onclick', 'deleteBook("' + id + '")');
 
                 // Leger den nye raden til i tabellen
                 tbody.appendChild(tr);
@@ -27,3 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error fetching data:', error);
         });
 });
+
+function deleteBook(id) {
+    console.log("Deleting book with id:", id);
+};

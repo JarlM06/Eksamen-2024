@@ -19,7 +19,7 @@ if ($conn -> connect_error) {
 }
 
 // Henter all data fra "boker" i databasen
-$sql = "SELECT Tittel, Forfattere, ISBN, Utgiver, Publiseringsar, Sideantall FROM boker";
+$sql = "SELECT * FROM boker";
 $result = $conn->query($sql);
 
 if ($result === FALSE) {

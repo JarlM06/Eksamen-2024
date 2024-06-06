@@ -147,3 +147,16 @@ input, textarea, .submit-button {
 .submit-button:hover {
     background-color: #3b7db1;
 }
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border-style: none;
+    border-radius: 0.2rem;
+    width: 5rem;
+    height: 3rem;
+}
+
+.delete-button:hover {
+    background-color: rgb(212, 2, 2);
+}
