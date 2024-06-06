@@ -21,20 +21,25 @@ if ($conn->connect_error) {
 // Sjekk om skjemaet er sendt inn
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hent skjema-data og rens
-    $title = mysqli_real_escape_string($conn, $_POST['title']);
-    $author = mysqli_real_escape_string($conn, $_POST['author']);
-    $isbn = mysqli_real_escape_string($conn, $_POST['isbn']);
-    $publisher = mysqli_real_escape_string($conn, $_POST['publisher']);
-    $year = mysqli_real_escape_string($conn, $_POST['year']);
-    $pages = mysqli_real_escape_string($conn, $_POST['pages']);
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $isbn = $_POST['isbn'];
+    $publisher = $_POST['publisher'];
+    $year = $_POST['year'];
+    $pages = $_POST['pages'];
 
-    // SQL-spørring for å sette inn data i databasen
-    $sql = "INSERT INTO boker (Tittel, Forfattere, ISBN, Utgiver, Publiseringsar, Sideantall) VALUES ('$title', '$author', '$isbn', '$publisher', '$year', '$pages')";
+    // SQL-spørring for å sette inn data i databasen med prepared statement
+    $sql = "INSERT INTO boker (Tittel, Forfattere, ISBN, Utgiver, Publiseringsar, Sideantall) VALUES (?, ?, ?, ?, ?, ?)";
+
+    // Prepare statement
+    $stmt = $conn->prepare($sql);
+    // Bind parameters
+    $stmt->bind_param("ssssii", $title, $author, $isbn, $publisher, $year, $pages);
 
     // Utfør spørringen
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         // Lukk tilkoblingen
-        $conn->close();
+        $stmt->close();
         
         // Omdiriger brukeren til ønsket side
         header("Location: /Frontend/index.html");
